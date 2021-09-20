@@ -1,0 +1,14 @@
+{
+  "name": "webclient",
+  "version": "1.0.0",
+  "description": "Procurement System",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "CMPG233 - Group 13",
+  "license": "ISC",
+  "dependencies": {
+    "fomantic-ui": "^2.8.8"
+  }
+}

@@ -1,0 +1,58 @@
+@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Log in";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="initial-scale=1, minimum-scale=1, width=device-width" name="viewport">
+    <meta name="robots" content="none">
+    <title>ACME | @ViewData["Title"]</title>
+
+    <link href="~/lib/fomantic-ui/dist/semantic.min.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="ui container centered grid">
+        <div class="five wide computer sixteen wide tablet sixteen wide phone column" style="margin-top: 10%;">
+            <form id="account" method="post">
+                <div class="ui segment">
+                    <div class="ui center aligned segment">
+                        <i class="hard hat orange massive icon"></i>
+                    </div>
+                    <div asp-validation-summary="All" class="ui red text"></div>
+                    <div class="ui form">
+                        <div class="required field">
+                            <label asp-for="Input.Username"></label>
+                            <input asp-for="Input.Username" placeholder="Username" class="ui set-focus" />
+                            <span asp-validation-for="Input.Username" class="ui red text"></span>
+                        </div>
+                        <div class="required field">
+                            <label asp-for="Input.Password"></label>
+                            <input asp-for="Input.Password" placeholder="Password" class="ui" />
+                            <span asp-validation-for="Input.Password" class="ui red text"></span>
+                        </div>
+                    </div>
+                    <br>
+                    <button type="submit" class="ui fluid primary labeled icon button">
+                        <i class="sign in alternate icon"></i>
+                        Log in
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/fomantic-ui/dist/semantic.min.js"></script>
+    <script src="~/js/site.js"></script>
+    <script src="~/js/login.js"></script>
+    <partial name="_ValidationScriptsPartial" />
+</body>
+</html>
